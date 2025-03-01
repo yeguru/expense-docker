@@ -4,7 +4,8 @@ networks:
 volumes:
   mysql:
 services:
-#docker run -d --name backend --network expense  backend:1.0.0 
+
+# docker run -d --name backend --network expense  backend:1.0.0 
   backend:
     image: backend:1.0.0
     networks:
@@ -13,7 +14,7 @@ services:
     depends_on:
     - mysql
 
-#docker run -d --name mysql --network expense -v mysql:/var/lib/mysql mysql:1.0.0 
+# docker run -d --name mysql --network expense -v mysql:/var/lib/mysql mysql:1.0.0 
   mysql:
     image: mysql:1.0.0
     networks:
@@ -21,7 +22,8 @@ services:
     container_name: mysql
     volumes:
     - mysql:/var/lib/mysql
-#docker run -d --name frontend --network expense -p 80:80 frontend:1.0.0
+
+# docker run -d --name frontend --network expense -p 80:80 frontend:1.0.0
   frontend:
     image: frontend:1.0.0
     networks:

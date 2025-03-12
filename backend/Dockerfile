@@ -15,7 +15,6 @@ WORKDIR /opt/backend
 USER expense
 COPY --from=builder /opt/backend /opt/backend
 CMD ["node","index.js"]
-
 # here craetes intermediate container (IC-1) from instruction-1
 # on top of IC-1 instruction-2 is executed and save this as layer-2 image and then we had removed the IC-1.
 # create IC-2 on top instruction-3 is executed and save this as layer-3 image and then we had removed the IC-2.
